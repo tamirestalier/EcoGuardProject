@@ -1,0 +1,32 @@
+/* Estilo para o corpo da página e a imagem de fundo */
+body {
+    background-image: url('background.jpg'); /* Substitua 'background.jpg' pelo nome da sua imagem de fundo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o contêiner que conterá os elementos de login e registro */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; /* Define a altura da página para ocupar a altura da janela de visualização */
+    padding: 20px;
+}
+
+/* Estilo para os formulários de login e registro */
+.login, .register {
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Estilo para os títulos dos formulários */
+h1 {
+    text-align: center;
+}
