@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGuard - Relatar Incêndio</title>
+</head>
+<body>
+    <h1>Relatar Incêndio</h1>
+    <form method="POST" action="/report_fire">
+        <label for="location">Localização:</label>
+        <input type="text" id="location" name="location" required><br><br>
+        <label for="fire_type">Tipo de Incêndio:</label>
+        <input type="text" id="fire_type" name="fire_type" required><br><br>
+        <input type="submit" value="Relatar Incêndio">
+    </form>
+</body>
+</html>
