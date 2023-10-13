@@ -4,31 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoGuard</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <title>
+        {% block titulo %}
+        EcoGuard
+        {% endblock %}
+    </title>
 </head>
+
+{% block body %}
+
 <body>
     <div class="container">
         <div class="login">
             <h1>Log In</h1>
             <!-- Formulário de Login -->
-            <form>
+            {% block formulario %}
+            <form method="POST" class="popup">
+                {{ form.csrf_token }} <!-- Trava de segurança para enviar informações para o banco de dados -->
                 <!-- Campos de entrada, como nome de usuário e senha -->
-                <button type="submit">Log In</button> <!-- Botão de Log In -->
+                <div class="div-input">
+                    {{ form.email.label(class="label") }}
+                    {{ form.email(class="input") }}
+                </div>
+
+                <div class="div-input">
+                    {{ form.senha.label(class="label") }}
+                    {{ form.senha(class="input") }}
+                </div>
+
+                <div class="div-botao">
+                    {{ form.botao_confirmacao(class="botao-login") }}
+                    <a href="{{ url_for('criar_conta') }}" style="text-decoration: none;">Ainda não possui uma conta? Clique aqui para criar</a>
+                </div>
             </form>
-        </div>
-        <div class="ecoguard">
-            <h1>ECOGUARD</h1> <!-- Texto ECOGUARD no meio -->
-        </div>
-        <div class="register">
-            <h1>Register</h1>
-            <!-- Formulário de Registro -->
-            <form>
-                <!-- Campos de entrada para registro -->
-                <button type="submit">Register</button> <!-- Botão de Register -->
-            </form>
+            {% endblock %}
         </div>
     </div>
 </body>
+
+{% endblock %}
+
 </html>
 
 
