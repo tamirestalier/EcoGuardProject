@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+
+{% block titulo %}
+EcoGuard - Criar Conta
+{% endblock %}
+
+{% block formulario %}
+
+<form method="POST" class="popup">
+    {{ form.csrf_token }} <!-- Trava de segurança para enviar informações para o banco de dados -->
+       <h2>Bem-vindo(a) ao EcoGuard</h2>
+
+    <div class="div-input">
+        {{ form.email.label(class="label") }}
+        {{ form.email(class="input") }}
+    </div>
+
+    <div class="div-input">
+        {{ form.username.label(class="label") }}
+        {{ form.username(class="input") }}
+    </div>
+
+    <div class="div-input">
+        {{ form.senha.label(class="label") }}
+        {{ form.senha(class="input") }}
+    </div>
+
+    <div class="div-input">
+        {{ form.confirmacao_senha.label(class="label") }}
+        {{ form.confirmacao_senha(class="input") }}
+    </div>
+
+    <div class="div-botao">
+        {{ form.botao_confirmacao(class="botao-login") }}
+        <a href="{{ url_for('index') }}" style="text-decoration: none;">Já possui uma conta? Clique aqui para entrar</a>
+    </div>
+</form>
+{% endblock %}
