@@ -1,4 +1,4 @@
-# EcoGuard
+# EcoGuard ❗🔥
 
 - O **EcoGuard** é um sistema integrado que capacita as comunidades locais a monitorizar e gerir eficazmente incêndios florestais e recursos naturais. 
 - Este repositório é destinado ao sistema web.
