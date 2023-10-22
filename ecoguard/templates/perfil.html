@@ -9,7 +9,12 @@ Perfil - {{ usuario.username }}
 <body>
     {% include "navbar.html" %}
     <div class="container">
-    Direcionar para o satélite =>
+        <div class="div-botao">
+            <a href="https://firms.modaps.eosdis.nasa.gov/map/#d:today;@-48.2,-10.7,5.2z" target="_blank">Monitorar os focos de queimada no mapa</a>
+        </div>
+        <div class="div-botao">
+            <a href="{{ url_for('protocolo') }}">Cadastrar uma ocorrência</a>
+        </div>
     </div>
 </body>
 {% endblock %}

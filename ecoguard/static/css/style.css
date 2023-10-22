@@ -64,12 +64,6 @@ img {
     justify-content: space-between;
 }
 
-.bg-imagem-pinterest {
-    width: 100%;
-    position: fixed;
-    top: 50vh;
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -87,7 +81,6 @@ img {
 }
 
 .popup {
-    /* display: none !important; */
     width: 400px;
     margin: auto;
     display: flex;
