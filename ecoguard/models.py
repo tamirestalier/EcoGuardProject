@@ -15,7 +15,6 @@ class Usuario(database.Model, UserMixin):
 
 class Protocolo(database.Model):
     id = database.Column(database.Integer, primary_key=True)
-    tipo = database.Column(database.String, nullable=False)
     local = database.Column(database.String, nullable=False)
     observacao = database.Column(database.String, nullable=False)
     data_criacao = database.Column(database.DateTime, nullable=False, default=datetime.utcnow())
