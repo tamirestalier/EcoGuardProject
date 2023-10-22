@@ -20,3 +20,7 @@ class FormCriarConta(FlaskForm):
         if usuario:
             return ValidationError("E-mail já cadastrado! Faça login para continuar.")
 
+class FormProtocolo(FlaskForm):
+    local = StringField("Local", validators=[DataRequired(), Length(10, 30)])
+    observacao = StringField("Observação", validators=[Length(6, 50)])
+    botao_confirmacao = SubmitField("Enviar")
