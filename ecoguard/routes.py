@@ -1,8 +1,8 @@
 from flask import render_template, url_for, redirect
 from ecoguard import app, database, bcrypt
-from ecoguard.models import Usuario
+from ecoguard.models import Usuario, Protocolo
 from flask_login import login_required, login_user, logout_user, current_user
-from ecoguard.forms import FormLogin, FormCriarConta
+from ecoguard.forms import FormLogin, FormCriarConta, FormProtocolo
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -34,6 +34,18 @@ def criar_conta():
 @login_required
 def perfil(id_usuario):
     return render_template("perfil.html", usuario=current_user)
+
+
+@app.route("/protocolo/<id_usuario>", methods=["GET", "POST"])
+@login_required
+def protocolo(id_usuario):
+    form_protocolo = FormProtocolo()
+    if form_protocolo.validate_on_submit():
+        protocolo = Protocolo(local=form_protocolo.local.data, observacao=form_protocolo.observacao.data, id_usuario=current_user.id)
+        database.session.add(protocolo)
+        database.session.commit()
+        return redirect(url_for("perfil", id_usuario=current_user.id))
+    return render_template("protocolo.html", usuario=current_user, form=form_protocolo)
 
 
 @app.route("/logout")
