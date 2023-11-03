@@ -1,20 +1,12 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: 50%;
 }
-/* Define uma imagem de fundo e estilos para o corpo da página */
+
 body {
-
-        font-family: Montserrat;
-        color: #333;
-        margin: 0;
-        padding: 0;
-        background-image: url("templates/img/bombeiroefoogo.jpeg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-
+    font-family: Montserrat;
+    color: #333;
+}
 nav {
     padding: 16px;
     display: flex;
@@ -234,3 +226,8 @@ img {
     column-gap: 20px;
 }
 
+.div-img  {
+    width: 300px; /* Largura desejada */
+    height: 200px; /* Altura desejada */
+  }
+  
