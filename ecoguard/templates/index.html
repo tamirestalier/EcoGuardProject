@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoGuard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <style>
+    </style>
     <title>
         {% block titulo %}
         EcoGuard
@@ -55,6 +57,11 @@
                     {{ form.botao_confirmacao(class="botao-login") }}
                     <a href="{{ url_for('criar_conta') }}" style="text-decoration: none;">Ainda não possui uma conta? Clique aqui para criar</a>
                 </div>
+                <body>
+                  <!-- Adicione a imagem aqui -->
+                  <img src="img/bombeiroefoogo.jpeg" alt="ImagemFundo">
+                  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+              </body>
             </form>
             {% endblock %}
         </div>

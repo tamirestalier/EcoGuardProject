@@ -2,11 +2,27 @@
     margin: 0;
     padding: 0;
 }
-
+/* Define uma imagem de fundo e estilos para o corpo da página */
 body {
     font-family: Montserrat;
     color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url("caminho/para/sua/imagem.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+/* Restante do seu código CSS permanece inalterado */
+nav {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* ... Outros estilos ... */
+
 
 nav {
     padding: 16px;
@@ -226,3 +242,4 @@ img {
     display: flex;
     column-gap: 20px;
 }
+
